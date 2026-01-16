@@ -29,7 +29,8 @@ export default function ProfessionalPortfolio() {
     image: require('./assets/CanvaProjects/Screenshot (163).png'),
     description: 'A student-focused mobile app designed to help manage tasks, schedules, and daily productivity through a clean and intuitive interface.',
     tech: ['Figma', 'UI Design', 'Prototyping'],
-    color: 'from-cyan-500 to-blue-600'
+    color: 'from-cyan-500 to-blue-600',
+    link: 'https://www.figma.com/design/9AN12VWa8q48xnQNiP6e1a/Student-Productivity-Mobile-App?node-id=0-1&t=GP7vZeqr7U7ziFdI-1'
   },
   {
     id: 2,
@@ -38,7 +39,8 @@ export default function ProfessionalPortfolio() {
     image: require('./assets/CanvaProjects/1.png'),
     description: 'A playful cartoon character illustration created for creative exploration and visual storytelling.',
     tech: ['Canva', 'Character Design', 'Digital Illustration'],
-    color: 'from-violet-500 to-purple-600'
+    color: 'from-violet-500 to-purple-600',
+    link: 'https://www.canva.com/design/DAG9XZtJLgg/upPTjafogWXwf-PhuMt7Aw/edit?utm_content=DAG9XZtJLgg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebuttonhttps://www.canva.com/design/DAG9XZtJLgg/upPTjafogWXwf-PhuMt7Aw/edit?utm_content=DAG9XZtJLgg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
   },
   {
     id: 3,
@@ -47,7 +49,8 @@ export default function ProfessionalPortfolio() {
     image: require('./assets/CanvaProjects/Vision Board.png'),
     description: 'A visually curated vision board capturing personal goals, inspiration, and creative direction for the year 2026.',
     tech: ['Canva', 'Visual Composition', 'Typography', 'Creative Direction'],
-    color: 'from-emerald-500 to-teal-600'
+    color: 'from-emerald-500 to-teal-600',
+    link: 'https://www.canva.com/design/DAG9VpRGnqA/5qvrABLnirI6eBLKYyNgPg/edit?utm_content=DAG9VpRGnqA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
   },
   {
     id: 4,
@@ -56,25 +59,28 @@ export default function ProfessionalPortfolio() {
     image: require('./assets/CanvaProjects/Lapollo Figma.png'),
     description: 'A mobile app design for property rentals, focusing on smooth navigation, listings display, and user-friendly booking flow.',
     tech: ['Figma', 'Mobile UI Design', 'Prototyping'],
-    color: 'from-orange-500 to-red-600'
+    color: 'from-orange-500 to-red-600',
+    link: 'https://www.figma.com/proto/bavypqiMfRtNmkDjfuJazk/Lapollo?node-id=22-263&p=f&t=VKD1ns8N8TNrAnOh-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=22%3A263'
   },
   {
     id: 5,
-    title: 'F1 DRIVER POSTER',
+    title: 'F1 DRIVERS POSTER',
     category: 'canva',
     image: require('./assets/CanvaProjects/LEWIS.png'),
     description: 'A bold, high-energy poster design inspired by Formula 1 racing and driver branding.',
     tech: ['Canva', 'Poster Design',],
-    color: 'from-indigo-500 to-blue-600'
+    color: 'from-indigo-500 to-blue-600',
+    link: 'https://www.canva.com/design/DAG-ZeyheM8/Pu1HD066H0IVCdNk0qQHUw/edit?utm_content=DAG-ZeyheM8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
   },
   {
     id: 6,
-    title: 'ANIME CHARACTER (NARUTO)',
+    title: 'ANIME CHARACTERS',
     category: 'canva',
     image: require('./assets/CanvaProjects/Untitled design (2).png'),
-    description: 'An anime-inspired character design recreating Naruto with a personal artistic style and creative interpretation.',
+    description: 'An anime-inspired characters design recreating different anime characters with a personal artistic style and creative interpretation.',
     tech: ['Canva', 'Digital Art', 'Character Illustration'],
-    color: 'from-rose-500 to-pink-600'
+    color: 'from-rose-500 to-pink-600',
+    link: 'https://www.canva.com/design/DAG9cRoTw2c/Acn8M3tcb6MZ5qyDgr2QOw/edit?utm_content=DAG9cRoTw2c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
   }
 ];
 
@@ -130,12 +136,12 @@ export default function ProfessionalPortfolio() {
     </div>
 
     {/* Right Button */}
-    <a
-      href="mailto:your@email.com"
-      className="hidden md:flex bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2 rounded-full hover:shadow-lg hover:shadow-cyan-500/50 transition"
-    >
-      Hire Me
-    </a>
+ <a
+  href="mailto:immaculatemuli25@gmail.com?subject=Inquiry%20About%20Your%20Design%20Services"
+  className="hidden md:flex bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2 rounded-full hover:shadow-lg hover:shadow-cyan-500/50 transition"
+>
+  Hire Me
+</a>
 
     {/* Mobile Menu Button */}
     <button 
@@ -174,7 +180,7 @@ export default function ProfessionalPortfolio() {
                 Contact
               </a>
               <a 
-                href="mailto:your@email.com"
+                href="mailto:immaculatemuli25@gmail.com?subject=Inquiry%20About%20Your%20Design%20Services"
                 className="block text-center bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 rounded-full hover:shadow-lg hover:shadow-cyan-500/50 transition"
               >
                 Hire Me
@@ -223,12 +229,13 @@ export default function ProfessionalPortfolio() {
                 View Projects
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition" />
               </a>
-              <a 
-                href="#contact"
-                className="bg-white/5 border border-white/10 px-8 py-4 rounded-full font-bold hover:bg-white/10 transition backdrop-blur-sm"
-              >
-                Download CV
-              </a>
+             <a 
+  href="/Immaculate Muli.pdf"  // Make sure your PDF is in the public folder
+  download="Immaculate Muli.pdf"
+  className="bg-white/5 border border-white/10 px-8 py-4 rounded-full font-bold hover:bg-white/10 transition backdrop-blur-sm"
+>
+  Download CV
+</a>
             </div>
           </div>
 
@@ -244,10 +251,10 @@ export default function ProfessionalPortfolio() {
   <div className="max-w-7xl mx-auto px-6 relative z-10">
     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
       {[
-        { num: '5', label: 'Projects in Progress', icon: Layers },        // realistic beginner projects
-        { num: '4', label: 'Tools & Software', icon: Zap },               // common tools learned
-        { num: '10+', label: 'Case Studies Completed', icon: Code },       // small number of portfolio pieces
-        { num: '20+', label: 'Design Projects', icon: ExternalLink }       // personal/freelance projects
+        { num: '5', label: 'Projects in Progress', icon: Layers },        
+        { num: '4', label: 'Tools & Software', icon: Zap },              
+        { num: '10+', label: 'Case Studies Completed', icon: Code },       
+        { num: '20+', label: 'Design Projects', icon: ExternalLink }       
       ].map((stat, i) => (
         <div key={i} className="relative group">
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
@@ -427,9 +434,12 @@ export default function ProfessionalPortfolio() {
                       <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-90 transition-all duration-500 flex items-center justify-center`}>
                         <div className="transform scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-500">
                           <a 
-                            href="#"
-                            className="inline-block bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-black hover:text-white transition-all duration-300 shadow-2xl"
-                          >
+  href={project.link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-black hover:text-white transition-all duration-300 shadow-2xl"
+>
+
                             <span className="flex items-center gap-3">
                               View Project
                               <ExternalLink className="w-5 h-5" />
@@ -513,7 +523,7 @@ export default function ProfessionalPortfolio() {
                   
                   <div className="flex gap-6 justify-center flex-wrap mb-12">
                     <a 
-                      href="mailto:your@email.com"
+                      href="mailto:immaculatemuli25@gmail.com?subject=Inquiry%20About%20Your%20Design%20Services"
                       className="group relative px-10 py-5 rounded-full font-bold text-lg overflow-hidden inline-block"
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 transition-transform group-hover:scale-105" />
@@ -525,7 +535,7 @@ export default function ProfessionalPortfolio() {
                     </a>
                     
                     <a 
-                      href="#"
+                      href=""
                       className="group px-10 py-5 rounded-full font-bold text-lg bg-white/5 border border-white/10 hover:bg-white/10 hover:border-cyan-500/50 transition-all duration-300 inline-block"
                     >
                       <span className="flex items-center gap-3">
@@ -541,7 +551,7 @@ export default function ProfessionalPortfolio() {
                       {[
                         { icon: Github, label: 'GitHub', href: 'https://github.com/yourusername' },
                         { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/yourusername' },
-                        { icon: Mail, label: 'Email', href: 'mailto:your@email.com' }
+                        { icon: Mail, label: 'Email', href: 'mailto:immaculatemuli25@gmail.com?subject=Inquiry%20About%20Your%20Design%20Services' }
                       ].map((social, i) => (
                         <a 
                           key={i}
@@ -577,7 +587,7 @@ export default function ProfessionalPortfolio() {
                 {[
                   { Icon: Github, href: 'https://github.com/yourusername' },
                   { Icon: Linkedin, href: 'https://linkedin.com/in/yourusername' },
-                  { Icon: Mail, href: 'mailto:your@email.com' }
+                  { Icon: Mail, href: 'mailto:immaculatemuli25@gmail.com?subject=Inquiry%20About%20Your%20Design%20Services' }
                 ].map((social, i) => (
                   <a 
                     key={i}
