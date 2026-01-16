@@ -534,23 +534,26 @@ export default function ProfessionalPortfolio() {
                       </span>
                     </a>
                     
-                    <a 
-                      href=""
-                      className="group px-10 py-5 rounded-full font-bold text-lg bg-white/5 border border-white/10 hover:bg-white/10 hover:border-cyan-500/50 transition-all duration-300 inline-block"
-                    >
-                      <span className="flex items-center gap-3">
-                        <Code className="w-6 h-6" />
-                        View Resume
-                      </span>
-                    </a>
+                   <a 
+  href="/Immaculate Muli.pdf"  // <-- public folder path
+  target="_blank"             // opens in a new tab
+  rel="noopener noreferrer"   // security best practice
+  className="group px-10 py-5 rounded-full font-bold text-lg bg-white/5 border border-white/10 hover:bg-white/10 hover:border-cyan-500/50 transition-all duration-300 inline-block"
+>
+  <span className="flex items-center gap-3">
+    <Code className="w-6 h-6" />
+    View Resume
+  </span>
+</a>
+
                   </div>
                   
                   <div className="pt-12 border-t border-white/10">
                     <p className="text-sm text-gray-500 mb-6">Or connect with me on</p>
                     <div className="flex gap-6 justify-center">
                       {[
-                        { icon: Github, label: 'GitHub', href: 'https://github.com/yourusername' },
-                        { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/yourusername' },
+                        { icon: Github, label: 'GitHub', href: 'https://github.com/muliimmaculate' },
+                        { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/immaculate-muli' },
                         { icon: Mail, label: 'Email', href: 'mailto:immaculatemuli25@gmail.com?subject=Inquiry%20About%20Your%20Design%20Services' }
                       ].map((social, i) => (
                         <a 
@@ -585,7 +588,7 @@ export default function ProfessionalPortfolio() {
               </p>
               <div className="flex gap-4">
                 {[
-                  { Icon: Github, href: 'https://github.com/yourusername' },
+                  { Icon: Github, href: 'https://github.com/muliimmaculate' },
                   { Icon: Linkedin, href: 'https://linkedin.com/in/yourusername' },
                   { Icon: Mail, href: 'mailto:immaculatemuli25@gmail.com?subject=Inquiry%20About%20Your%20Design%20Services' }
                 ].map((social, i) => (
