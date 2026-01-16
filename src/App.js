@@ -356,141 +356,147 @@ export default function ProfessionalPortfolio() {
   </div>
 </section>
 
+{/* Projects Section */}
+<section id="work" className="py-32 relative overflow-hidden">
+  {/* Background Blobs */}
+  <div className="absolute inset-0">
+    <div className="absolute top-1/4 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
+    <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
+  </div>
 
-        {/* Projects Section */}
-        <section id="work" className="py-32 relative overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-1/4 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
-          </div>
-          
-          <div className="max-w-7xl mx-auto px-6 relative z-10">
-            <div className="text-center mb-20">
-              <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 px-4 py-2 rounded-full mb-6">
-                <Layers className="w-4 h-4 text-cyan-400" />
-                <span className="text-sm text-cyan-400 font-bold">PORTFOLIO</span>
-              </div>
-              <h2 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
-                Featured <span className="gradient-text">Projects</span>
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                A curated selection of work that showcases my expertise in creating 
-                user-centered designs and impactful visual experiences
-              </p>
-            </div>
+  <div className="max-w-7xl mx-auto px-6 relative z-10">
+    {/* Header */}
+    <div className="text-center mb-20">
+      <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 px-4 py-2 rounded-full mb-6">
+        <Layers className="w-4 h-4 text-cyan-400" />
+        <span className="text-sm text-cyan-400 font-bold">PORTFOLIO</span>
+      </div>
+      <h2 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
+        Featured <span className="gradient-text">Projects</span>
+      </h2>
+      <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+        A curated selection of work that showcases my expertise in creating 
+        user-centered designs and impactful visual experiences
+      </p>
+    </div>
 
-            {/* Filter */}
-            <div className="flex gap-4 mb-16 justify-center flex-wrap">
-              {[
-                { id: 'all', label: 'All Work', count: projects.length },
-                { id: 'figma', label: 'Figma Design', count: projects.filter(p => p.category === 'figma').length },
-                { id: 'canva', label: 'Canva Design', count: projects.filter(p => p.category === 'canva').length }
-              ].map(filter => (
-                <button
-                  key={filter.id}
-                  onClick={() => setActiveFilter(filter.id)}
-                  className={`relative px-8 py-4 rounded-full font-bold transition-all duration-300 ${
-                    activeFilter === filter.id
-                      ? 'text-white'
-                      : 'bg-white/5 border border-white/10 hover:bg-white/10 text-gray-400 hover:text-white'
-                  }`}
-                >
-                  {activeFilter === filter.id && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full" />
-                  )}
-                  <span className="relative flex items-center gap-2">
-                    {filter.label}
-                    <span className={`text-xs px-2 py-1 rounded-full ${
-                      activeFilter === filter.id ? 'bg-white/20' : 'bg-white/10'
-                    }`}>
-                      {filter.count}
+    {/* Filter Buttons */}
+    <div className="flex gap-4 mb-16 justify-center flex-wrap">
+      {[
+        { id: 'all', label: 'All Work', count: projects.length },
+        { id: 'figma', label: 'Figma Design', count: projects.filter(p => p.category === 'figma').length },
+        { id: 'canva', label: 'Canva Design', count: projects.filter(p => p.category === 'canva').length }
+      ].map(filter => (
+        <button
+          key={filter.id}
+          onClick={() => setActiveFilter(filter.id)}
+          className={`relative px-8 py-4 rounded-full font-bold transition-all duration-300 ${
+            activeFilter === filter.id
+              ? 'text-white'
+              : 'bg-white/5 border border-white/10 hover:bg-white/10 text-gray-400 hover:text-white'
+          }`}
+        >
+          {activeFilter === filter.id && (
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full" />
+          )}
+          <span className="relative flex items-center gap-2">
+            {filter.label}
+            <span className={`text-xs px-2 py-1 rounded-full ${
+              activeFilter === filter.id ? 'bg-white/20' : 'bg-white/10'
+            }`}>
+              {filter.count}
+            </span>
+          </span>
+        </button>
+      ))}
+    </div>
+
+    {/* Projects Grid */}
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {filteredProjects.map((project, index) => (
+        <div
+          key={project.id}
+          onMouseEnter={() => setHoveredCard(project.id)}
+          onMouseLeave={() => setHoveredCard(null)}
+          className="group relative"
+          style={{
+            animation: `slide-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${index * 0.1}s both`
+          }}
+        >
+          {/* Gradient Border on Hover */}
+          <div className="absolute -inset-1 bg-gradient-to-br from-cyan-500/50 to-purple-500/50 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500" />
+
+          {/* Card Container */}
+          <div className="relative bg-black/60 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-xl group-hover:border-white/20 flex flex-col h-full">
+            {/* Image Section */}
+            <div className="relative h-72 overflow-hidden">
+              <img 
+                src={project.image} 
+                alt={project.title}
+                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
+              />
+              <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-90 transition-all duration-500 flex items-center justify-center`}>
+                <div className="transform scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-500">
+                  <a 
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-black hover:text-white transition-all duration-300 shadow-2xl"
+                  >
+                    <span className="flex items-center gap-3">
+                      View Project
+                      <ExternalLink className="w-5 h-5" />
                     </span>
-                  </span>
-                </button>
-              ))}
-            </div>
-
-            {/* Projects Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredProjects.map((project, index) => (
-                <div
-                  key={project.id}
-                  onMouseEnter={() => setHoveredCard(project.id)}
-                  onMouseLeave={() => setHoveredCard(null)}
-                  className="group relative"
-                  style={{
-                    animation: `slide-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${index * 0.1}s both`
-                  }}
-                >
-                  <div className="absolute -inset-1 bg-gradient-to-br from-cyan-500/50 to-purple-500/50 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500" />
-                  
-                  <div className="relative bg-black/60 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-xl group-hover:border-white/20 transition-all duration-300">
-                    <div className="relative h-72 overflow-hidden">
-                      <img 
-                        src={project.image} 
-                        alt={project.title}
-                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
-                      />
-                      <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-90 transition-all duration-500 flex items-center justify-center`}>
-                        <div className="transform scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-500">
-                          <a 
-  href={project.link}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-block bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-black hover:text-white transition-all duration-300 shadow-2xl"
->
-
-                            <span className="flex items-center gap-3">
-                              View Project
-                              <ExternalLink className="w-5 h-5" />
-                            </span>
-                          </a>
-                        </div>
-                      </div>
-                      
-                      <div className="absolute top-4 right-4">
-                        <div className={`px-4 py-2 rounded-full font-bold text-sm backdrop-blur-xl bg-white/10 border border-white/20`}>
-                          {project.category === 'figma' ? 'Figma' : 'Canva'}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="p-8">
-                      <h3 className="text-2xl font-black mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 transition-all duration-300">
-                        {project.title}
-                      </h3>
-                      <p className="text-gray-400 mb-6 leading-relaxed">
-                        {project.description}
-                      </p>
-                      <div className="flex gap-2 flex-wrap">
-                        {project.tech.map((tech, i) => (
-                          <span 
-                            key={i}
-                            className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm font-bold text-gray-300 hover:bg-white/10 hover:border-cyan-500/30 transition-all"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+                  </a>
                 </div>
-              ))}
+              </div>
+              
+              <div className="absolute top-4 right-4">
+                <div className="px-4 py-2 rounded-full font-bold text-sm backdrop-blur-xl bg-white/10 border border-white/20">
+                  {project.category === 'figma' ? 'Figma' : 'Canva'}
+                </div>
+              </div>
             </div>
 
-            <div className="text-center mt-16">
-              <a 
-                href="#contact"
-                className="inline-block group bg-white/5 border border-white/10 px-8 py-4 rounded-full font-bold hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 hover:border-transparent transition-all duration-300"
-              >
-                <span className="flex items-center gap-2">
-                  View All Projects
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </a>
+            {/* Content Section */}
+            <div className="p-8 flex-1 flex flex-col">
+              <h3 className="text-2xl font-black mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 transition-all duration-300">
+                {project.title}
+              </h3>
+              <p className="text-gray-400 mb-6 leading-relaxed flex-1">
+                {project.description}
+              </p>
+              <div className="flex gap-2 flex-wrap mt-auto">
+                {project.tech.map((tech, i) => (
+                  <span 
+                    key={i}
+                    className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm font-bold text-gray-300 hover:bg-white/10 hover:border-cyan-500/30 transition-all"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
-        </section>
+        </div>
+      ))}
+    </div>
+
+    {/* View All Projects Button */}
+    <div className="text-center mt-16">
+      <a 
+        href="#contact"
+        className="inline-block group bg-white/5 border border-white/10 px-8 py-4 rounded-full font-bold hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 hover:border-transparent transition-all duration-300"
+      >
+        <span className="flex items-center gap-2">
+          View All Projects
+          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
 
         {/* CTA Section */}
         <section id="contact" className="py-32 relative overflow-hidden">
