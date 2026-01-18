@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Layers, Code, Zap, ArrowRight, Github, Linkedin, Mail, ExternalLink, ChevronDown, Menu, X } from 'lucide-react';
-
+import { Layers, Code, Zap, ArrowRight, Github, Linkedin, Mail, ExternalLink, ChevronDown, Menu, X,  ArrowUp } from 'lucide-react';
 export default function ProfessionalPortfolio() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -88,6 +87,12 @@ export default function ProfessionalPortfolio() {
     ? projects 
     : projects.filter(p => p.category === activeFilter);
 
+    const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+};
   return (
     <div className="min-h-screen bg-black text-white">
       <style jsx>{`
@@ -373,7 +378,7 @@ export default function ProfessionalPortfolio() {
       </div>
       <h2 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
         Featured <span className="gradient-text">Projects</span>
-      </h2>
+      </h2>X
       <p className="text-xl text-gray-400 max-w-3xl mx-auto">
         A curated selection of work that showcases my expertise in creating 
         user-centered designs and impactful visual experiences
@@ -651,6 +656,28 @@ export default function ProfessionalPortfolio() {
           </div>
         </div>
       </footer>
+
+    {scrollY > 500 && (
+  <button
+    onClick={scrollToTop}
+    className="
+      fixed bottom-8 right-8 z-50
+      w-14 h-14 rounded-2xl
+      bg-black/60 backdrop-blur-xl
+      border border-white/10
+      flex items-center justify-center
+      shadow-xl shadow-cyan-500/20
+      transition-all duration-500
+      hover:border-cyan-400/50
+      hover:shadow-cyan-500/40
+      hover:-translate-y-1
+    "
+  >
+    <ArrowUp className="w-6 h-6 text-cyan-400" />
+  </button>
+)}
+
+
     </div>
   );
 }
