@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm start *)",
+      "Bash(npm install *)",
+      "Bash(powershell -Command \"Start-Sleep 20; Get-Content 'C:\\\\Users\\\\mulii\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-mulii-Desktop-Portfolio\\\\5a9ca8e9-478d-4541-bde5-4f8b03da0e51\\\\tasks\\\\bj6cyuhjz.output'\")",
+      "Bash(powershell -Command \"Start-Sleep 10; Get-Content 'C:\\\\Users\\\\mulii\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-mulii-Desktop-Portfolio\\\\5a9ca8e9-478d-4541-bde5-4f8b03da0e51\\\\tasks\\\\bj6cyuhjz.output' | Select-Object -Last 12\")",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:boineelomoyo.github.io)",
+      "WebFetch(domain:berkindev.tech)",
+      "Bash(curl -s \"https://boineelomoyo.github.io/Portfolio/\")",
+      "Bash(curl -s \"https://berkindev.tech/\")",
+      "Bash(curl -s \"https://boineelomoyo.github.io/Portfolio/styles.css\")",
+      "Bash(powershell -Command \"Start-Sleep 8; Get-Content 'C:\\\\Users\\\\mulii\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-mulii-Desktop-Portfolio\\\\5a9ca8e9-478d-4541-bde5-4f8b03da0e51\\\\tasks\\\\bj6cyuhjz.output' | Select-Object -Last 4\")",
+      "Bash(powershell -Command \"Get-Content 'C:\\\\Users\\\\mulii\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-mulii-Desktop-Portfolio\\\\5a9ca8e9-478d-4541-bde5-4f8b03da0e51\\\\tasks\\\\bj6cyuhjz.output' | Select-Object -Last 10\")",
+      "Bash(powershell -Command \"Start-Sleep 12; Get-Content 'C:\\\\Users\\\\mulii\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-mulii-Desktop-Portfolio\\\\5a9ca8e9-478d-4541-bde5-4f8b03da0e51\\\\tasks\\\\bj6cyuhjz.output' | Select-Object -Last 5\")",
+      "Bash(curl -s https://berkindev.tech/)",
+      "Bash(curl -s https://berkindev.tech/assets/index-TTXzfIQ8.css)",
+      "Bash(curl -s https://berkindev.tech/assets/index-DQxIBEFU.js)",
+      "Bash(curl -s \"https://berkindev.tech/assets/index-DQxIBEFU.js\")",
+      "Bash(curl -s \"https://boineelomoyo.github.io/Portfolio/styles/style.css\")",
+      "Bash(curl -s \"https://boineelomoyo.github.io/Portfolio/css/style.css\")",
+      "Bash(powershell -Command \"Start-Sleep 14; Get-Content 'C:\\\\Users\\\\mulii\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-mulii-Desktop-Portfolio\\\\5a9ca8e9-478d-4541-bde5-4f8b03da0e51\\\\tasks\\\\bj6cyuhjz.output' | Select-Object -Last 8\")",
+      "Bash(powershell -Command \"Start-Sleep 14; Get-Content 'C:\\\\Users\\\\mulii\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-mulii-Desktop-Portfolio\\\\5a9ca8e9-478d-4541-bde5-4f8b03da0e51\\\\tasks\\\\bj6cyuhjz.output' | Select-Object -Last 5\")",
+      "Bash(powershell -Command \"Start-Sleep 12; Get-Content 'C:\\\\Users\\\\mulii\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-mulii-Desktop-Portfolio\\\\5a9ca8e9-478d-4541-bde5-4f8b03da0e51\\\\tasks\\\\bj6cyuhjz.output' | Select-Object -Last 4\")",
+      "Bash(grep -oE \"#[0-9a-fA-F]{3,8}\")",
+      "Bash(pip show *)",
+      "Bash(py -c \"import rembg; print\\('ok'\\)\")",
+      "Bash(py -m pip install rembg[cli] onnxruntime pillow)",
+      "Bash(powershell -Command \"Get-Content 'C:\\\\Users\\\\mulii\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-mulii-Desktop-Portfolio\\\\ed9bd1f8-61d0-47d9-919a-0ae3a9b17449\\\\tasks\\\\blfspmllo.output'\")"
+    ]
+  }
+}
